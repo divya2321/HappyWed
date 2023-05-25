@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "965120317444",
+    "firebase_url": "https://divz-happywed.firebaseio.com",
+    "project_id": "divz-happywed",
+    "storage_bucket": "divz-happywed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965120317444:android:1e718c88e5c740b6a43d51",
+        "android_client_info": {
+          "package_name": "com.example.happywed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965120317444-88dejtaug2n5gposblhmcv0lpmu7fl84.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.happywed",
+            "certificate_hash": "79a8f64ba9a432fa8757c7dbd71a80e36e78db3d"
+          }
+        },
+        {
+          "client_id": "965120317444-i972eac1e86lvfe170og6388lr5909tm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB2xFVNZkrdqhcSJH984xWgTYr555ps6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965120317444-i972eac1e86lvfe170og6388lr5909tm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
