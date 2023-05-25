@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDetails"
+
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView"
+
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+
+            android:scaleType="matrix"
+            android:src="@drawable/user_profile_cover"
+
+            android:background="@color/black"/>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePic"
+
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+
+                android:src="@drawable/couple"
+
+                app:civ_border_color="@color/dark_ash"
+                app:civ_border_width="1dp"
+
+                android:layout_marginTop="-60dp"
+                android:layout_marginBottom="10dp"
+
+
+                app:layout_anchor="@id/detailsSet"
+                app:layout_anchorGravity="center_horizontal"
+
+                android:onClick="enterToUpload"/>
+
+            <androidx.core.widget.NestedScrollView
+        android:id="@+id/detailsSet"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:paddingBottom="10dp"
+        android:paddingHorizontal="20dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+
+                android:text="@string/your_name"
+                android:textSize="16sp"
+                android:textColor="@color/dark_ash"/>
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="16dp"
+        android:textCursorDrawable="@null"
+
+        android:gravity="center_horizontal"
+
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:background="@drawable/pink_corner_background"
+
+        android:inputType="textVisiblePassword|textNoSuggestions"/>
+
+
+    <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center_horizontal"
+
+         android:layout_marginTop="20dp"
+         android:padding="5dp"
+
+         android:text="@string/partner_name"
+         android:textSize="16sp"
+         android:textColor="@color/dark_ash"/>
+
+    <EditText
+        android:id="@+id/partnerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="16dp"
+        android:textCursorDrawable="@null"
+
+        android:gravity="center_horizontal"
+
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:background="@drawable/pink_corner_background"
+
+        android:inputType="textVisiblePassword|textNoSuggestions"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+
+        android:text="@string/big_day"
+        android:textSize="16sp"
+        android:textColor="@color/dark_ash"/>
+
+
+        <CheckedTextView
+            android:id="@+id/noDateChecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/do_not_have_day"
+            android:textSize="16sp"
+            android:drawablePadding="20dp"
+            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:onClick="checkNoDate"
+            />
+
+
+    <DatePicker
+        android:id="@+id/weddingDate"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            android:padding="5dp"
+
+            android:text="@string/estimated_budget"
+            android:textSize="16sp"
+            android:textColor="@color/dark_ash"/>
+
+        <EditText
+            android:id="@+id/estimatedBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="16dp"
+            android:textCursorDrawable="@null"
+
+            android:gravity="center_horizontal"
+
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:background="@drawable/pink_corner_background"
+
+            android:inputType="textVisiblePassword|textNoSuggestions|number"/>
+
+        <Button
+            android:id="@+id/saveUser"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingHorizontal="60dp"
+            android:paddingVertical="10dp"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+
+            android:textAllCaps="false"
+            android:text="@string/save"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/button_end"
+
+            android:onClick="saveUserDetails"/>
+
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/userProgressBar"
+            layout="@layout/user_progress_layout"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

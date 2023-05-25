@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+
+    android:background="@drawable/try5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="120dp"
+
+        android:gravity="end"
+
+        android:paddingHorizontal="10dp"
+        android:text="@string/welcome_new"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="414dp"
+        android:layout_height="588dp"
+        android:layout_marginTop="100dp"
+
+        android:background="@drawable/upside_corner"
+
+        android:orientation="vertical"
+        android:paddingHorizontal="60dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="40dp"
+
+            android:text="@string/sign_up"
+            android:textColor="@color/dark_ash"
+            android:textSize="16sp" />
+
+        <com.google.android.gms.common.SignInButton
+
+            android:id="@+id/googleContinue"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+
+            android:background="@drawable/empty_corner_rounded"
+
+            android:paddingBottom="15dp"
+
+            android:textAllCaps="false"
+
+            android:textSize="16sp" />
+
+
+        <com.facebook.login.widget.LoginButton xmlns:facebook="http://schemas.android.com/apk/res-auto"
+
+            android:id="@+id/signUpFacebook"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:elevation="6dp"
+
+            android:gravity="center_horizontal"
+            android:paddingVertical="12dp"
+
+            android:textSize="16sp"
+
+            facebook:com_facebook_logout_text="@string/sign_up_facebook" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+
+            android:text="@string/or_sign_up"
+            android:textColor="@color/dark_ash"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+
+            android:text="@string/mobile_number"
+            android:textColor="@color/dark_ash"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:id="@+id/signInEnterNo"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ash_corner_background">
+
+            <EditText
+                android:id="@+id/mobileNo"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@null"
+                android:ems="9"
+                android:hint="000000000"
+
+                android:inputType="phone"
+                android:maxLength="9"
+
+
+                android:paddingLeft="48dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+
+                android:textCursorDrawable="@null"
+
+                android:textSize="16sp">
+
+                <requestFocus />
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/prefix"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="8dp"
+
+                android:text="+94"
+                android:textColor="@color/dark_ash"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+
+        <Button
+            android:id="@+id/logIn"
+
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corners"
+
+            android:onClick="sendCodeToNo"
+            android:text="@string/verify_phone"
+            android:textAllCaps="false"
+
+            android:textColor="@color/white"
+
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginTop="150dp"
+
+            android:paddingTop="10dp"
+
+            android:text="@string/tnc"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginBottom="10dp"
+            android:onClick="goToTermsConditions"
+            android:text="@string/terms_conditions"
+
+            android:textAlignment="center"
+
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/signupProgressBar"
+        layout="@layout/signup_progress_layout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

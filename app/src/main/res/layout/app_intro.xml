@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppIntro">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/introView"
+
+        android:layout_width="411dp"
+        android:layout_height="517dp"
+
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:overScrollMode="never"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+
+        android:background="@drawable/upside_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <LinearLayout
+            android:id="@+id/introDot"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:gravity="center_horizontal">
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titleIntro"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            android:text="Title1"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/descriptionIntro"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:lines="4"
+
+            android:text="Description of the Title 1 which is in the tesing introduction page"
+            android:textSize="15sp"
+            android:textColor="@color/ash"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="8dp"
+
+            android:background="@drawable/rounded_corners"
+
+            android:text="@string/get_started"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+
+            android:onClick="gotoSignInOption"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

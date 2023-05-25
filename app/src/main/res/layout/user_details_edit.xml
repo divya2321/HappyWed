@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDetailsEdit"
+
+    android:orientation="vertical">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button_end"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/lightTheme"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="@string/user_profile"
+        app:titleTextColor="@color/white"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="?attr/actionBarSize"
+
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:scaleType="matrix"
+                android:src="@drawable/user_profile_cover" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePic"
+
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+
+                android:src="@drawable/couple"
+
+                app:civ_border_color="@color/dark_ash"
+                app:civ_border_width="1dp"
+
+                android:layout_marginTop="-60dp"
+                android:layout_marginBottom="10dp"
+
+
+                app:layout_anchor="@id/detailsSet"
+                app:layout_anchorGravity="center_horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/detailsSet"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    android:paddingBottom="10dp"
+                    android:paddingHorizontal="20dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+
+                        android:layout_marginTop="20dp"
+                        android:padding="5dp"
+
+                        android:text="@string/your_name"
+                        android:textSize="16sp"
+                        android:textColor="@color/dark_ash"/>
+
+                    <EditText
+                        android:id="@+id/userName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="16dp"
+                        android:textCursorDrawable="@null"
+
+                        android:gravity="center_horizontal"
+
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/pink_corner_background"
+
+                        android:inputType="textVisiblePassword|textNoSuggestions"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+
+                        android:layout_marginTop="20dp"
+                        android:padding="5dp"
+
+                        android:text="@string/partner_name"
+                        android:textSize="16sp"
+                        android:textColor="@color/dark_ash"/>
+
+                    <EditText
+                        android:id="@+id/partnerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="16dp"
+                        android:textCursorDrawable="@null"
+
+                        android:gravity="center_horizontal"
+
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/pink_corner_background"
+
+                        android:inputType="textVisiblePassword|textNoSuggestions"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+
+                        android:layout_marginTop="20dp"
+                        android:padding="5dp"
+
+                        android:text="@string/mobile_number"
+                        android:textSize="16sp"
+                        android:textColor="@color/dark_ash"/>
+
+
+                    <FrameLayout
+                        android:id="@+id/enterNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pink_corner_background">
+
+                        <EditText
+                            android:id="@+id/mobileNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="9"
+                            android:hint="0000000000"
+                            android:inputType="phone"
+                            android:maxLength="9"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:paddingVertical="10dp"
+                            android:paddingHorizontal="16dp"
+                            android:textCursorDrawable="@null"
+                            android:background="@drawable/pink_corner_background">
+                        </EditText>
+
+                        <TextView
+                            android:id="@+id/prefix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:textColor="@color/dark_ash"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:text="+94" />
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+
+                        android:layout_marginTop="20dp"
+                        android:padding="5dp"
+
+                        android:text="@string/big_day"
+                        android:textSize="16sp"
+                        android:textColor="@color/dark_ash"/>
+
+
+                    <CheckedTextView
+                        android:id="@+id/noDateChecked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/do_not_have_day"
+                        android:textSize="16sp"
+                        android:drawablePadding="20dp"
+                        android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                        android:gravity="center_vertical"
+                        android:onClick="checkNoDate"
+                        />
+
+
+                    <DatePicker
+                        android:id="@+id/weddingDate"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_horizontal"/>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+
+                        android:padding="5dp"
+
+                        android:text="@string/estimated_budget"
+                        android:textSize="16sp"
+                        android:textColor="@color/dark_ash"/>
+
+                    <EditText
+                        android:id="@+id/estBudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="16dp"
+                        android:textCursorDrawable="@null"
+
+                        android:gravity="center_horizontal"
+
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/pink_corner_background"
+
+                        android:inputType="number|textVisiblePassword|textNoSuggestions"/>
+
+
+                    <Button
+                        android:id="@+id/editBtn"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:paddingHorizontal="60dp"
+                        android:paddingVertical="10dp"
+
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+
+                        android:textAllCaps="false"
+                        android:text="@string/edit"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+
+                        android:background="@drawable/rounded_corners"
+
+                        android:onClick="editUserDetails"/>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/userProgressBar"
+            layout="@layout/user_progress_layout"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

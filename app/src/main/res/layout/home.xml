@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerNav"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+
+    android:background="@color/app_background">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:background="@drawable/downside_corner">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/downside_corner"
+
+                android:elevation="6dp"
+                android:outlineSpotShadowColor="@color/button_end">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="250dp"
+                    android:src="@drawable/home_cover"
+
+                    android:scaleType="fitXY"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/openDrawerBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.087"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="@+id/imageView2"
+                    app:layout_constraintVertical_bias="0.137"
+
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/weddingDateLayout"
+                    android:layout_width="330dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2">
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayout1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/counter_background"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtDay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#4a0000"
+                                android:textSize="35dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_Day"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="@string/days"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayout2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/counter_background"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtHour"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#4a0000"
+                                android:textSize="35sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_Hour"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="@string/hours"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/counter_background"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtMinute"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#4a0000"
+                                android:textSize="35sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_Minute"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="@string/minutes"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayout4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/counter_background"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtSecond"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#4a0000"
+                                android:textSize="35sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_Second"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="@string/seconds"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/weddigDayWish"
+                    android:layout_height="90dp"
+                    android:layout_width="330dp"
+                    android:background="@drawable/counter_background"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Happy Big Day!"
+                        android:textSize="35dp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+
+
+                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/coupleName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="cursive"
+                                    android:text="Nipz + Divz"
+                                    android:textColor="@color/black"
+                                    android:textSize="35dp"
+                                    android:textFontWeight="10"
+                                    android:textAlignment="center"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="15dp"
+                                    app:layout_constraintBottom_toTopOf="@+id/weddingDateLayout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <ImageView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="200dp"
+                                    android:layout_marginTop="11dp"
+                                    android:src="@drawable/chat_user_icon"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.808"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/weddingDateLayout"
+                                    app:layout_constraintVertical_bias="0.428"
+                                    android:onClick="gotoChat"
+
+                                 />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <androidx.core.widget.NestedScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fillViewport="true"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+
+                                    android:weightSum="2"
+                                    android:layout_weight="1">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+
+                                        app:cardCornerRadius="12dp"
+                                        android:layout_margin="10dp"
+                                        android:padding="20dp"
+                                        android:elevation="6dp"
+
+                                        android:layout_weight="1"
+
+                                        android:onClick="goToService">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+
+                                            android:gravity="center"
+
+                                            android:focusable="true"
+                                            android:background="@drawable/search_background">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+                                                android:text="@string/services"
+                                                android:textSize="18sp"/>
+
+                                            <ImageView
+                                                android:layout_width="120dp"
+                                                android:layout_height="120dp"
+
+                                                android:src="@drawable/wedding_logo"/>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/checklist"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+
+                                        app:cardCornerRadius="12dp"
+                                        android:layout_margin="10dp"
+                                        android:padding="20dp"
+                                        android:elevation="6dp"
+
+                                        android:layout_weight="1"
+
+                                        android:onClick="goToCheckList">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+
+                                            android:gravity="center"
+
+                                            android:focusable="true"
+                                            android:background="@drawable/search_background">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+                                                android:text="@string/checklist"
+                                                android:textSize="18sp"/>
+
+                                            <ImageView
+                                                android:layout_width="120dp"
+                                                android:layout_height="120dp"
+
+                                                android:src="@drawable/hw_checklist"/>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+
+                                    android:layout_weight="1">
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/budget"
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+
+                                        app:cardCornerRadius="12dp"
+                                        android:layout_margin="10dp"
+                                        android:padding="20dp"
+                                        android:elevation="6dp"
+
+                                        android:layout_weight="1"
+
+                                        android:onClick="goToBudgetList">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+
+                                            android:gravity="center"
+
+                                            android:focusable="true"
+                                            android:background="@drawable/search_background">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+                                                android:text="@string/budget"
+                                                android:textSize="18sp"/>
+
+                                            <ImageView
+                                                android:layout_width="120dp"
+                                                android:layout_height="120dp"
+
+                                                android:src="@drawable/hw_budget"/>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/guest"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+
+                                        app:cardCornerRadius="12dp"
+                                        android:layout_margin="10dp"
+                                        android:padding="20dp"
+                                        android:elevation="6dp"
+
+                                        android:layout_weight="1"
+
+                                        android:onClick="gotoGuest">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+
+                                            android:gravity="center"
+
+                                            android:focusable="true"
+                                            android:background="@drawable/search_background">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+                                                android:text="@string/guest"
+                                                android:textSize="18sp"/>
+
+                                            <ImageView
+                                                android:layout_width="120dp"
+                                                android:layout_height="120dp"
+
+                                                android:src="@drawable/hw_guest"/>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+
+                                    android:layout_weight="1">
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/favourite"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+
+                                        app:cardCornerRadius="12dp"
+                                        android:layout_margin="10dp"
+                                        android:padding="20dp"
+                                        android:elevation="6dp"
+
+                                        android:layout_weight="1"
+
+                                        android:onClick="gotoFavourite">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+
+                                            android:gravity="center"
+
+                                            android:focusable="true"
+                                            android:background="@drawable/search_background">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+                                                android:text="@string/favourite"
+                                                android:textSize="18sp"/>
+
+                                            <ImageView
+                                                android:layout_width="120dp"
+                                                android:layout_height="120dp"
+
+                                                android:src="@drawable/hw_favourite"/>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/custom"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+
+                                        app:cardCornerRadius="12dp"
+                                        android:layout_margin="10dp"
+                                        android:padding="20dp"
+                                        android:elevation="6dp"
+
+                                        android:layout_weight="1"
+
+                                        android:onClick="gotoCustom">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+
+                                            android:gravity="center"
+
+                                            android:focusable="true"
+                                            android:background="@drawable/search_background">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+
+                                                android:text="@string/custom"
+                                                android:textSize="18sp"/>
+
+                                            <ImageView
+                                                android:layout_width="120dp"
+                                                android:layout_height="120dp"
+
+                                                android:src="@drawable/hw_custom"/>
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+                        </androidx.core.widget.NestedScrollView>
+                    </LinearLayout>
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/userNavigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        android:background="@color/button_end"
+
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+
+        app:menu="@menu/navigation_item_menu"
+        android:layout_gravity="start"
+
+
+        app:headerLayout="@layout/navigation_header">
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+

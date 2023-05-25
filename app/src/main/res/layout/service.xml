@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Service"
+
+    android:orientation="vertical"
+
+    android:background="@color/app_background">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button_end"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/lightTheme"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="@string/category"
+        app:titleTextColor="@color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/jewellery"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+
+        android:onClick="gotoJewelleryCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+                android:src="@drawable/common_jewellery"
+                android:scaleType="fitXY"/>
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/jewellery"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dress"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoDressCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_dress"
+            android:background="@color/ash"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/dresses"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/salon"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoSalonCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_makeup"
+            android:background="@color/floating_button"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/salon"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/hotel"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoHotelCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_halls"
+            android:background="@color/floating_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/hotel"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/poru"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoPoruCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/common_poruwa"
+            android:scaleType="fitXY"
+            android:background="@color/floating_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/poru"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/decoration"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoDecorationCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/common_decoration"
+            android:scaleType="fitXY"
+            android:background="@color/floating_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/decoration"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/photographer"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoPhotographerCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_photographer"
+            android:background="@color/floating_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/photographers"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/invitation"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoInvitationCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_invitation"
+            android:background="@color/floating_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/invitations"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cake"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoCakeCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_cake"
+            android:background="@color/floating_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/cake"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/music"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoMusicCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_music"
+            android:background="@color/floating_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/music"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/caterine"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoCaterineCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_caterin"
+            android:background="@color/floating_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/caterine"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vehicle"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoVehicleCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_vehicle"
+            android:background="@color/floating_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/vehicle"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/wedding_plan"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoWeddingPlanCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_wedplan"
+            android:background="@color/floating_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/wedding_planner"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/event_plan"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoEventPlaneCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_eveplan"
+            android:background="@color/floating_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/event_planner"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/other"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:layout_margin="10dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="6dp"
+        android:onClick="gotoOtherCategoryView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/common_other"
+            android:background="@color/floating_layout"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:gravity="start"
+
+            android:text="@string/other"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

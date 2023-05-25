@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+        <item
+            android:title="@string/app_features">
+            <menu>
+                <item
+                    android:id="@+id/services"
+                    android:title="@string/services" />
+                <item
+                    android:id="@+id/checklist"
+                    android:title="@string/checklist" />
+                <item
+                    android:id="@+id/budget"
+                    android:title="@string/budget" />
+                <item
+                    android:id="@+id/guest"
+                    android:title="@string/guest" />
+                <item
+                    android:id="@+id/favourited"
+                    android:title="@string/favourite" />
+                <item
+                    android:id="@+id/custom"
+                    android:title="@string/custom" />
+                <item
+                    android:id="@+id/login_as_business"
+                    android:title="@string/login_as_business"/>
+            </menu>
+        </item>
+
+        <item
+            android:title="@string/setting">
+            <menu>
+                <item
+                    android:id="@+id/darkTheme"
+                    android:title="@string/dark_theme"
+                    android:actionLayout="@layout/navigation_drawer_switch"/>
+                <item
+                    android:id="@+id/profile"
+                    android:title="@string/profile" />
+
+                <item
+                    android:id="@+id/terms_conditions"
+                    android:title="@string/terms_conditions_main" />
+                <item
+                    android:id="@+id/help_center"
+                    android:title="@string/help_center" />
+                <item
+                    android:id="@+id/about_us"
+                    android:title="@string/about_us" />
+                <item
+                    android:id="@+id/logout"
+                    android:title="@string/logout" />
+            </menu>
+        </item>
+
+
+</menu>

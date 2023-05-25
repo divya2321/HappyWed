@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">@color/status_bar</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="status_bar">#FBBDD5</color>
+    <color name="app_background">#FCF3F7</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="ash">#ababab</color>
+    <color name="dark_ash">#808080</color>
+
+    <color name="button_start">#ffc196</color>
+    <color name="button_end">#f75f88</color>
+
+    <color name="floating_layout">#ffdde1</color>
+    <color name="floating_button">#fbd3e9</color>
+
+    <color name="facebook_color">#457fca</color>
+    <color name="email_color">#1c92d2</color>
+    <color name="google_color">#da4453</color>
+
+
+</resources>

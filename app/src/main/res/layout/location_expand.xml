@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:background="@color/app_background"
+    tools:context=".LocationExpand">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/button_end"
+
+        android:minHeight="?attr/actionBarSize"
+
+        android:theme="@style/lightTheme"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="@string/location"
+        app:titleTextColor="@color/white"/>
+
+    <SearchView
+        android:id="@+id/searhLocationText"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:iconifiedByDefault="false"
+
+        android:background="@drawable/search_background"
+
+        android:queryHint="@string/search_location"
+        android:queryBackground="@android:color/transparent"
+
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp" />
+
+
+    <Button
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:text="@string/all_of_srilanka"
+        android:textAllCaps="false"
+        android:gravity="left|center_vertical"
+        android:background="@null"
+        android:textSize="18sp"
+        android:layout_marginHorizontal="20dp"
+        android:onClick="selectAllSriLanka"/>
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:listSelector="@color/status_bar"
+
+        android:id="@+id/locationExpandList"
+
+        android:layout_marginHorizontal="15dp"
+        android:padding="10dp"
+
+        android:divider="@color/status_bar"
+        android:dividerHeight="1dp"/>
+
+</LinearLayout>

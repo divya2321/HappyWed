@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+ <androidx.cardview.widget.CardView
+     android:layout_height="230dp"
+     android:layout_width="350dp"
+     app:cardCornerRadius="20dp"
+     android:elevation="6dp">
+
+     <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:orientation="vertical">
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/verification_code"
+         android:textSize="16sp"
+         android:textColor="@color/black"
+         android:textStyle="bold"
+         android:layout_gravity="center_horizontal"
+         android:layout_marginTop="10dp"/>
+
+     <TextView
+         android:id="@+id/sendCodeIns"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/enter_verification_code_inst"
+         android:textSize="16sp"
+         android:textColor="@color/black"
+         android:textAlignment="center"
+         android:layout_gravity="center_horizontal"
+         android:layout_marginTop="5dp"
+         android:layout_marginHorizontal="20dp"/>
+
+         <com.goodiebag.pinview.Pinview
+             android:id="@+id/pinCode"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             app:cursorVisible="true"
+             app:forceKeyboard="true"
+             app:hint="0"
+             app:inputType="number"
+             app:password="false"
+             app:pinHeight="20dp"
+             app:pinLength="6"
+             app:pinWidth="20dp"
+             app:textSize="5dp"/>
+
+         <Button
+             android:id="@+id/resendBtn"
+             android:layout_width="match_parent"
+             android:layout_height="35dp"
+             android:textAllCaps="false"
+             android:text="@string/donnot_get_code"
+             android:textColor="@color/button_end"
+             android:layout_marginTop="20dp"
+             android:background="?attr/selectableItemBackground"/>
+         <Button
+             android:id="@+id/cancelBtn"
+             android:layout_width="match_parent"
+             android:layout_height="35dp"
+             android:textAllCaps="false"
+             android:text="@string/cancel"
+             android:textColor="@color/button_end"
+             android:background="?attr/selectableItemBackground"/>
+
+     </LinearLayout>
+
+ </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

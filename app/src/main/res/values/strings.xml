@@ -1,0 +1,308 @@
+<resources>
+    <string name="app_name">HappyWed</string>
+
+    <string name="get_started">Get Started</string>
+
+    <string-array name="introTitles">
+
+        <item>Title 1</item>
+        <item>Title 2</item>
+        <item>Title 3</item>
+        <item>Title 4</item>
+        <item>Title 5</item>
+
+    </string-array>
+
+    <string-array name="introDescriptions">
+
+        <item>Description of the Title 1 which is in the tesing introduction page 1</item>
+        <item>Description of the Title 1 which is in the tesing introduction page 2</item>
+        <item>Description of the Title 1 which is in the tesing introduction page 3</item>
+        <item>Description of the Title 1 which is in the tesing introduction page 4</item>
+        <item>Description of the Title 1 which is in the tesing introduction page 5</item>
+
+    </string-array>
+
+    <string name="verify_account">Verify Account</string>
+    <string name="verify_phone">Verify Mobile Number</string>
+    <string name="send_code">Send verification code via SMS</string>
+    <string name="resend_code">Resend verification code</string>
+    <string name="change_no">Change Mobile Number</string>
+    <string name="verification_code">Verification code</string>
+
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_as_user">Sign Up As User</string>
+    <string name="sign_up_as_business">Sign Up As Business</string>
+    <string name="i_have_an_account">I have an Account</string>
+
+
+    <string name="welcome_new">Welcome to HappyWed!</string>
+    <string name="welcome_old">Welcome back!</string>
+
+    <string name="mobile_number">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="log_in">Log In</string>
+
+
+    <string name="or_sign_up">or Sign Up with Phone Number</string>
+
+    <string name="sign_up_google">Sign Up with Google</string>
+    <string name="sign_up_email">Sign Up with Email</string>
+    <string name="sign_up_facebook">Sign Up with Facebook</string>
+
+    <string name="have_an_account">Have an Account?</string>
+    <string name="tnc">by Signing Up, you are agreeing to our</string>
+    <string name="terms_conditions"><u>Terms and Conditions</u></string>
+
+    <string name="user_detail_title">Let\'s finish your Account create...</string>
+
+    <string name="your_name">Your Name</string>
+    <string name="partner_name">Partner Name</string>
+    <string name="big_day">Big Day</string>
+    <string name="do_not_have_day">I dont\'t have a day</string>
+    <string name="set_details">Set Details</string>
+    <string name="enter_verification_code_inst">Enter the verification code sent to your mobile number</string>
+    <string name="donnot_get_code">Don\'t Get a Code?</string>
+
+    <string name="services">Services</string>
+    <string name="checklist">Checklist</string>
+    <string name="budget">Budget Plan</string>
+    <string name="guest">Guest Plan</string>
+    <string name="favourite">Favourited</string>
+    <string name="wishlist">WishList</string>
+    <string name="custom">Custom Info.</string>
+
+    <string name="days">Days</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+
+    <string name="empty_text">Oooops! Empty</string>
+
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="complete_before">Complete before</string>
+
+    <string name="jewellery">Jewellery and Accessory</string>
+    <string name="dresses">Dresses</string>
+    <string name="salon">Salons and Makeup</string>
+    <string name="hotel">Hotels and Halls</string>
+    <string name="poru">Poru, Mandap and...</string>
+    <string name="decoration">Decorations</string>
+    <string name="photographers">Photographers</string>
+    <string name="invitations">Invitation Cards</string>
+    <string name="cake">Cakes and Sweets</string>
+    <string name="music">Music and Dancing</string>
+    <string name="caterine">Caterine Services</string>
+    <string name="vehicle">Wedding Vehicle</string>
+    <string name="wedding_planner">Wedding Planners</string>
+    <string name="event_planner">Event Planners</string>
+    <string name="other">Others</string>
+
+    <string name="location">Location</string>
+    <string name="all_of_srilanka">All of Sri Lanka</string>
+    <string name="view_option">View as</string>
+    <string name="search_for_product">Search for a Product</string>
+    <string name="search_for_shop">Search for a Shop</string>
+
+    <string name="about">About</string>
+    <string name="gallery">Gallery</string>
+    <string name="contact">Contact</string>
+    <string name="products">Products</string>
+    <string name="shops">Shops</string>
+    <string name="my_product_list">My Product List</string>
+    <string name="products_search_hint">Search Products</string>
+    <string name="view_product">View Product</string>
+
+    <string name="my_shops">My Shops</string>
+    <string name="my_shop">My Shop</string>
+    <string name="my_shop_list">My Shop List</string>
+    <string name="messages">Messages</string>
+    <string name="help_centre">Help Centre</string>
+
+    <string name="oops_no_shop">Ooops! No shop...</string>
+
+    <string name="business_name">Business Name</string>
+    <string name="business_category">Business Category</string>
+
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="cancel">Cancel</string>
+
+
+    <string name="rate">Rate</string>
+    <string name="product">Product</string>
+    <string name="category">Category</string>
+    <string name="pictures">Pictures</string>
+    <string name="views">Views</string>
+
+    <string name="general_details">General Details</string>
+    <string name="our_products">Our Products</string>
+    <string name="preview">Preview</string>
+    <string name="deactive">Deactivate</string>
+    <string name="active_shop">Activate Shop</string>
+    <string name="deactive_shop">Deactivate Shop</string>
+    <string name="deactive_status">Deactivated</string>
+    <string name="active_status">Activated</string>
+    <string name="active">Activate Account</string>
+
+    <string name="shop_details">Shop Details</string>
+    <string name="location_details">Location Details</string>
+    <string name="contact_details">Contact Details</string>
+    <string name="shop_products">Shop Products</string>
+
+    <string name="no">No</string>
+    <string name="street">Street</string>
+    <string name="street1">Street 1</string>
+    <string name="street2">Street2</string>
+    <string name="city">City</string>
+    <string name="district">District</string>
+    <string name="select_your_location">Select Your Location</string>
+    <string name="and_or">-and/or-</string>
+    <string name="business_discription">Business Discription</string>
+    <string name="contact1">Contact 1</string>
+    <string name="contact2">Contact 2</string>
+
+    <string name="product_name">Product Name</string>
+    <string name="product_discription">Product Discription</string>
+    <string name="product_price">Product Price</string>
+    <string name="add_photos">Add Photos</string>
+
+    <string name="oops_product">Oooops! No Products...</string>
+
+    <string name="estimated_budget">Estimated Budget</string>
+    <string name="estimated_full_budget">Estimated Full Budget</string>
+    <string name="due_budget">Estimated Budget</string>
+    <string name="total_cost">Total Cost</string>
+
+    <string name="family_name">Family Name</string>
+    <string name="adult_count">Adult Count</string>
+    <string name="children_count">Children Count</string>
+    <string name="adults">Adults</string>
+    <string name="all">All</string>
+    <string name="children">Children</string>
+    <string name="total_count">Total Guest Count</string>
+
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="date">Date</string>
+
+    <string name="user_profile">User Profile</string>
+    <string name="business_profile">Business Profile</string>
+    <string name="profile">Profile</string>
+    <string name="go_to_shop"><u>Go to Shop</u></string>
+    <string name="terms_conditions_main">Terms and Conditions</string>
+    <string name="help_center">Help Center</string>
+    <string name="about_us">About Us</string>
+    <string name="logout">Logout</string>
+    <string name="theme">Theme</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="app_features">App Features</string>
+    <string name="setting">Setting</string>
+    <string name="settings">SETTINGS</string>
+    <string name="yes">Yes</string>
+    <string name="login_as_business">Login as Business</string>
+
+
+    <string name="overall_rating">Overall Rating</string>
+    <string name="five_star">5 star</string>
+    <string name="four_star">4 star</string>
+    <string name="three_star">3 star</string>
+    <string name="two_star">2 star</string>
+    <string name="one_star">1 star</string>
+
+    <string name="reviews">Reviews</string>
+    <string name="call">Call</string>
+    <string name="chat">Chat</string>
+    <string name="write_review">Write Your Review</string>
+    <string name="submit">Submit</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="cont">Continue</string>
+
+    <string name="search_location">Search for a Location</string>
+
+    <string name="anuradhapura">Anuradhapura</string>
+    <string name="ampara">Ampara</string>
+    <string name="badulla">Badulla</string>
+    <string name="galle">Galle</string>
+    <string name="jaffna">Jaffna</string>
+    <string name="kandy">Kandy</string>
+    <string name="kegalle">Kegalle</string>
+    <string name="kurunegala">Kurunegala</string>
+    <string name="monaragala">Monaragala</string>
+    <string name="matara">Matara</string>
+    <string name="matale">Matale</string>
+    <string name="mannar">Mannar</string>
+    <string name="nuwaraeliya">Nuwara Eliya</string>
+    <string name="puttalam">Puttalam</string>
+    <string name="ratnapura">Ratnapura</string>
+    <string name="trincomalee">Trincomalee</string>
+    <string name="vavuniya">Vavuniya</string>
+    <string name="gampaha">Gampaha</string>
+    <string name="kalutara">Kalutara</string>
+    <string name="hambantota">Hambantota</string>
+    <string name="batticaloa">Batticaloa</string>
+    <string name="polonnaruwa">Polonnaruwa</string>
+    <string name="kilinochchi">Kilinochchi</string>
+    <string name="mulativ">Mulativu</string>
+    <string name="colombo">Colombo</string>
+
+
+    <string-array name="locations_district">
+        <item>Ampara</item>
+        <item>Anuradhapura</item>
+        <item>Badulla</item>
+        <item>Batticaloa</item>
+        <item>Colombo</item>
+        <item>Galle</item>
+        <item>Gampaha</item>
+        <item>Hambantota</item>
+        <item>Jaffna</item>
+        <item>Kalutara</item>
+        <item>Kandy</item>
+        <item>Kegalle</item>
+        <item>Kilinochchi</item>
+        <item>Kurunegala</item>
+        <item>Mannar</item>
+        <item>Matale</item>
+        <item>Matara</item>
+        <item>Monaragala</item>
+        <item>Mullaitivu</item>
+        <item>Nuwara Eliya</item>
+        <item>Polonnaruwa</item>
+        <item>Puttalam</item>
+        <item>Ratnapura</item>
+        <item>Trincomalee</item>
+        <item>Vavuniya</item>
+    </string-array>
+
+    <string-array name="locations_city">
+        <item>Piliyandala</item>
+        <item>Maharagama</item>
+        <item>Boralesgamuwa</item>
+        <item>Kaduwela</item>
+        <item>Nugegoda</item>
+        <item>Gampaha</item>
+        <item>Biyagama</item>
+        <item>Delgoda</item>
+        <item>Weliveriya</item>
+    </string-array>
+
+
+    <string-array name="viewAsOption">
+        <item>View as Image</item>
+        <item>View as Business</item>
+    </string-array>
+
+    <string name="facebook_app_id">640759136485228</string>
+    <string name="fb_login_protocol_scheme">fb640759136485228</string>
+    <string name="title_activity_business_shop_general_details_map">Map</string>
+
+    <string name="type_a_message">Type a message</string>
+
+
+</resources>

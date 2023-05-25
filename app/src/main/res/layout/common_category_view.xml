@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommonCategoryView"
+
+    android:orientation="vertical"
+
+    android:background="@color/app_background">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button_end"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/lightTheme"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="@string/product"
+        app:titleTextColor="@color/white"/>
+
+    <LinearLayout
+        android:id="@+id/upperBorder"
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+
+        android:elevation="8dp">
+
+        <SearchView
+            android:id="@+id/itemSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:iconifiedByDefault="false"
+
+            android:background="@drawable/search_background"
+
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+
+            android:queryHint="@string/search_for_product"
+            android:queryBackground="@android:color/transparent"
+
+            android:textAlignment="center"
+            android:orientation="vertical"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/filterLocation"
+
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+
+                android:background="@drawable/search_background"
+
+                android:paddingHorizontal="5dp"
+
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:text="@string/all_of_srilanka"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+
+                android:gravity="center"
+
+                android:onClick="gotoLocation"/>
+
+            <Spinner
+                android:id="@+id/filterViewAs"
+
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+
+                android:background="@drawable/search_background"
+
+                android:entries="@array/viewAsOption"
+
+                android:textSize="16sp"
+                android:textColor="@color/black"
+
+                android:layout_marginLeft="5dp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryRecycler"
+
+        android:layout_margin="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

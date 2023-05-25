@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BusinessShopGeneralDetail"
+    android:background="@color/app_background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button_end"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/lightTheme"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="@string/general_details"
+        app:titleTextColor="@color/white"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+
+        android:layout_marginTop="?attr/actionBarSize"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                android:text="@string/shop_details"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="@string/business_name"
+                android:textSize="16sp" />
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:weightSum="16">
+
+                <EditText
+                    android:id="@+id/shopName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="15"
+                    android:background="@drawable/ash_corner_background"
+
+                    android:inputType="textVisiblePassword|textNoSuggestions"
+
+                    android:padding="10dp"
+
+                    android:textSize="18sp" />
+
+
+                <ImageView
+                    android:id="@+id/nameEditBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/edit_btn" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/categoryTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="@string/business_category"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:weightSum="16">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/shopCategoryList"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="15" />
+
+                <ImageView
+                    android:id="@+id/categoryEditBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/edit_btn" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="@string/business_discription"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:weightSum="16">
+
+                <EditText
+                    android:id="@+id/shopDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="15"
+                    android:background="@drawable/ash_corner_background"
+                    android:gravity="start"
+
+                    android:inputType="textVisiblePassword|textNoSuggestions|textMultiLine|text"
+
+                    android:lines="8"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/descriptionEditBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/edit_btn" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                android:text="@string/contact_details"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="@string/contact1"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:weightSum="16">
+
+                <EditText
+                    android:id="@+id/shopContact1"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_weight="15"
+                    android:background="@drawable/ash_corner_background"
+
+                    android:inputType="number|textNoSuggestions"
+
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/contact1EditBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/edit_btn" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="@string/contact2"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:weightSum="16">
+
+                <EditText
+                    android:id="@+id/shopContact2"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_weight="15"
+                    android:background="@drawable/ash_corner_background"
+
+                    android:inputType="number|textNoSuggestions"
+
+                    android:padding="10dp"
+
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/contact2EditBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/edit_btn" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                android:text="@string/location_details"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="@string/no"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:weightSum="16">
+
+                <EditText
+                    android:id="@+id/shopLocationNo"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_weight="15"
+                    android:background="@drawable/ash_corner_background"
+
+                    android:inputType="textVisiblePassword|textNoSuggestions"
+
+                    android:padding="10dp"
+
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/noEditBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/edit_btn" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="@string/street1"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:weightSum="16">
+
+                <EditText
+                    android:id="@+id/shopLocationStreet1"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_weight="15"
+                    android:background="@drawable/ash_corner_background"
+
+                    android:inputType="textVisiblePassword|textNoSuggestions"
+
+                    android:padding="10dp"
+
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/street1EditBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/edit_btn" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="@string/street2"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:weightSum="16">
+
+                <EditText
+                    android:id="@+id/shopLocationStreet2"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_weight="15"
+                    android:background="@drawable/ash_corner_background"
+
+                    android:inputType="textVisiblePassword|textNoSuggestions"
+
+                    android:padding="10dp"
+
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/street2EditBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/edit_btn" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="@string/city"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:weightSum="16">
+
+                <Spinner
+                    android:id="@+id/shopLocationCity"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:layout_weight="15"
+
+                    android:background="@drawable/ash_corner_background" />
+
+                <ImageView
+                    android:id="@+id/cityEditBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/edit_btn" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="@string/district"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:weightSum="16">
+
+
+                <Spinner
+                    android:id="@+id/shopLocationDistrict"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:layout_weight="15"
+
+                    android:background="@drawable/ash_corner_background" />
+
+                <ImageView
+                    android:id="@+id/districtEditBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/edit_btn" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+
+                android:text="@string/and_or"
+                android:textSize="14sp" />
+
+
+            <Button
+                android:id="@+id/shopMapLocation"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ash_corner_background"
+
+                android:gravity="center"
+                android:onClick="selectLocationMap"
+                android:paddingHorizontal="10dp"
+
+                android:paddingVertical="5dp"
+                android:text="@string/select_your_location"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+
+                android:textSize="16sp" />
+
+            <fragment
+                android:id="@+id/shopLocatinMap"
+                class="com.google.android.gms.maps.SupportMapFragment"
+
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp" />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/contactCard"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/businessSave"
+
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+            android:background="@drawable/rounded_corners"
+
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+
+            android:onClick="saveGeneralDetails"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <include
+        android:id="@+id/userProgressBar"
+        layout="@layout/user_progress_layout"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatForBusiness"
+    android:background="@color/app_background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button_end"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/lightTheme"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:titleTextColor="@color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePicture"
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:src="@drawable/common_dress"/>
+
+        <TextView
+            android:id="@+id/profileName"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:id="@+id/chatMessageList"
+
+        android:layout_below="@+id/my_toolbar"
+        android:layout_above="@+id/belowSet"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+
+        android:id="@+id/belowSet"
+
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
+
+            android:layout_toLeftOf="@+id/sendButton"
+            android:layout_centerVertical="true"
+
+            android:id="@+id/messageArea"
+
+            android:background="@android:color/transparent"
+
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:hint="@string/type_a_message"/>
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+
+
+            android:background="@android:color/transparent"
+
+            android:src="@drawable/send_button"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

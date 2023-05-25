@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp"
+    android:layout_height="650dp"
+
+    android:layout_gravity="center"
+
+    android:padding="10dp"
+
+    android:background="@drawable/ash_corner_background"
+    android:backgroundTint="@color/app_background"
+
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/product_name"
+                    android:textSize="18sp"
+
+                    android:layout_weight="6"/>
+
+                <ImageView
+                    android:id="@+id/cancel"
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+
+                    android:src="@drawable/cancel"/>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/productName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/black"
+                android:textSize="18sp"
+
+                android:background="@drawable/ash_corner_background"
+                android:backgroundTint="@color/white"
+                android:inputType="textNoSuggestions|textVisiblePassword"
+
+                android:padding="10dp"
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="10dp"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/product_discription"
+                android:textSize="18sp"
+
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/productDiscription"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/black"
+                android:textSize="18sp"
+
+                android:background="@drawable/ash_corner_background"
+                android:backgroundTint="@color/white"
+                android:inputType="textNoSuggestions|textVisiblePassword|text|textMultiLine"
+
+                android:lines="8"
+                android:padding="10dp"
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="10dp"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/product_price"
+                android:textSize="18sp"
+
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/productPrice"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/black"
+                android:textSize="18sp"
+
+                android:background="@drawable/ash_corner_background"
+                android:backgroundTint="@color/white"
+                android:inputType="textNoSuggestions|textVisiblePassword|number"
+
+                android:padding="10dp"
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="10dp"/>
+
+
+            <TextView
+                android:id="@+id/categoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/category"
+                android:textSize="18sp"
+
+                android:layout_marginTop="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryRecyclerView"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="10dp"/>
+
+
+            <TextView
+                android:id="@+id/imgTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/pictures"
+                android:textSize="18sp"
+
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/addPhotos"
+
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+
+                android:background="@drawable/ash_corner_background"
+                android:backgroundTint="@color/black"
+
+                android:text="@string/add_photos"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productImageRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="5dp"/>
+
+
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp">
+
+
+
+
+
+                <Button
+                    android:id="@+id/popupDelete"
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    android:background="@drawable/rounded_corners"
+                    android:layout_marginRight="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="@string/delete"/>
+
+                <Button
+                    android:id="@+id/popupSave"
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    android:background="@drawable/rounded_corners"
+                    android:layout_marginLeft="10dp"
+
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="@string/save"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

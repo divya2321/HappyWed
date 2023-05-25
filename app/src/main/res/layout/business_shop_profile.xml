@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BusinessShopProfile"
+    android:background="@color/app_background">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button_end"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/lightTheme"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:title="@string/my_shop"
+            app:titleTextColor="@color/white"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginBottom="450dp"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:scaleType="matrix"
+            android:src="@drawable/business_profile_cover"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/my_toolbar"
+
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/businessShopProfileGrab"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+
+        android:background="@drawable/upside_corner"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/businessShopName"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="70dp"
+            android:gravity="center_horizontal"
+
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/shopStatusTitle"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_horizontal"
+
+            android:textColor="@color/dark_ash"
+            android:text="@string/active_status"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="15dp"
+
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+
+                    android:text="@string/rate"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+
+                    android:text="@string/product"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"/>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="15dp"
+
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/overallRateTxt"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+
+                    android:text="0.0"
+                    android:textSize="18sp"
+                    android:textColor="@color/button_end"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/productCount"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+
+                    android:text="00"
+                    android:textSize="18sp"
+                    android:textColor="@color/button_end"
+                    android:textStyle="bold"/>
+
+
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:layout_marginTop="40dp"
+
+                        android:gravity="center_vertical"
+
+                        android:paddingHorizontal="20dp"
+
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"
+
+                        android:onClick="gotoBusinessGeneralDetails">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="20dp"
+
+                            android:layout_marginRight="20dp"
+
+                            android:src="@drawable/business_general_detail" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="@string/general_details"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+
+                            android:gravity="center_vertical"
+
+                            android:layout_weight="8"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:src="@drawable/next"/>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:layout_marginTop="20dp"
+
+                        android:gravity="center_vertical"
+
+                        android:paddingHorizontal="20dp"
+
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"
+
+                        android:onClick="goToChat">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="20dp"
+
+                            android:layout_marginRight="20dp"
+
+                            android:src="@drawable/message_icon" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="@string/messages"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+
+                            android:gravity="center_vertical"
+
+                            android:layout_weight="8"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:src="@drawable/next"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:layout_marginTop="20dp"
+
+                        android:gravity="center_vertical"
+
+                        android:paddingHorizontal="20dp"
+
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"
+
+                        android:onClick="gotoBusinessProductDetails">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+
+                            android:padding="5dp"
+
+                            android:layout_gravity="center_vertical"
+
+                            android:src="@drawable/business_product_icon"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="@string/our_products"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+
+                            android:gravity="center_vertical"
+
+                            android:layout_weight="8"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:src="@drawable/next"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:layout_marginTop="20dp"
+
+                        android:gravity="center_vertical"
+
+                        android:paddingHorizontal="20dp"
+
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"
+
+
+                        android:onClick="gotoBusinessReviews">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+
+                            android:padding="5dp"
+
+                            android:layout_gravity="center_vertical"
+
+                            android:src="@drawable/business_review_icon"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="@string/reviews"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+
+                            android:gravity="center_vertical"
+
+                            android:layout_weight="8"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:src="@drawable/next"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:layout_marginTop="20dp"
+
+                        android:gravity="center_vertical"
+
+                        android:paddingHorizontal="20dp"
+
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"
+
+                        android:onClick="gotoBusinessPreview">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+
+                            android:paddingHorizontal="2dp"
+
+                            android:layout_gravity="center_vertical"
+
+                            android:src="@drawable/business_preview_icon"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="@string/preview"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+
+                            android:gravity="center_vertical"
+
+                            android:layout_weight="8"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:src="@drawable/next"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        android:layout_marginTop="20dp"
+
+                        android:gravity="center_vertical"
+
+                        android:paddingHorizontal="20dp"
+
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"
+
+                        android:onClick="goToDeactivateShop">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+
+                            android:padding="5dp"
+
+                            android:layout_gravity="center_vertical"
+
+                            android:src="@drawable/business_act_icon"/>
+
+                        <TextView
+                            android:id="@+id/deactivateTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:text="@string/deactive_shop"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+
+                            android:gravity="center_vertical"
+
+                            android:layout_weight="8"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:src="@drawable/next"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/shopProPic"
+        android:layout_width="120dp"
+
+        android:layout_height="120dp"
+        android:padding="5dp"
+
+
+        android:src="@drawable/defaultshoppic"
+
+
+        app:layout_anchor="@id/businessShopProfileGrab"
+        app:layout_anchorGravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="editShopProPic"/>
+
+    <include
+        android:id="@+id/userProgressBar"
+        layout="@layout/user_progress_layout"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

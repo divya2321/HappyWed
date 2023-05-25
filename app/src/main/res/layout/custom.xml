@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Custom"
+
+    android:background="@color/app_background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button_end"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/lightTheme"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="@string/custom"
+        app:titleTextColor="@color/white"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/customList"
+
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+
+            android:layout_marginVertical="15dp"
+            android:layout_marginHorizontal="30dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/emptyNoteImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/empty_note"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emptyNoteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="200dp"
+            android:text="@string/empty_text"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checklistList"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emptyNoteImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomBorder"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+
+        android:layout_marginTop="100dp"
+
+        android:background="@drawable/upside_corner"
+
+        android:backgroundTint="@color/floating_layout"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+
+            android:layout_marginTop="65dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="40dp"
+
+            android:background="@drawable/empty_corner_rounded"
+            android:backgroundTint="@color/white">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="start"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="5dp"
+
+                android:text="@string/title"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/titleText"
+
+                android:background="@drawable/ash_corner_background"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textSize="18sp"
+                android:textColor="@color/black"
+
+                android:gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:padding="8dp"
+
+                android:inputType="text|textVisiblePassword|textNoSuggestions"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="5dp"
+
+                android:text="@string/contact"
+                android:textSize="18sp"/>
+
+
+            <EditText
+                android:id="@+id/addrContact"
+
+                android:background="@drawable/ash_corner_background"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textSize="18sp"
+                android:textColor="@color/black"
+
+                android:gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:padding="8dp"
+
+                android:inputType="number|textVisiblePassword|textNoSuggestions"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="5dp"
+
+                android:text="@string/no"
+                android:textSize="18sp"/>
+
+
+            <EditText
+                android:id="@+id/addrNo"
+
+                android:background="@drawable/ash_corner_background"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textSize="18sp"
+                android:textColor="@color/black"
+
+                android:gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:padding="8dp"
+
+                android:inputType="text|textVisiblePassword|textNoSuggestions"/>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="5dp"
+
+                android:text="@string/street"
+                android:textSize="18sp"/>
+
+
+            <EditText
+                android:id="@+id/addrStrt"
+
+                android:background="@drawable/ash_corner_background"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textSize="18sp"
+                android:textColor="@color/black"
+
+                android:gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:padding="8dp"
+
+                android:inputType="text|textVisiblePassword|textNoSuggestions"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="5dp"
+
+                android:text="@string/city"
+                android:textSize="18sp"/>
+
+
+            <EditText
+                android:id="@+id/addrCity"
+
+                android:background="@drawable/ash_corner_background"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textSize="18sp"
+                android:textColor="@color/black"
+
+                android:gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:padding="8dp"
+
+                android:inputType="text|textVisiblePassword|textNoSuggestions"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="5dp"
+
+                android:text="@string/description"
+                android:textSize="18sp"/>
+
+
+            <EditText
+                android:id="@+id/description"
+
+                android:background="@drawable/ash_corner_background"
+
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+
+                android:textSize="18sp"
+                android:textColor="@color/black"
+
+                android:gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:padding="8dp"
+
+                android:inputType="text|textMultiLine|textVisiblePassword|textNoSuggestions"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="5dp"
+
+                android:text="@string/budget"
+                android:textSize="18sp"/>
+
+
+            <EditText
+                android:id="@+id/budget"
+
+                android:background="@drawable/ash_corner_background"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textSize="18sp"
+                android:textColor="@color/black"
+
+                android:gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:padding="8dp"
+
+                android:inputType="number|textVisiblePassword|textNoSuggestions"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        android:id="@+id/cancelBudgetItem"
+
+                        android:layout_width="10dp"
+                        android:layout_height="40dp"
+
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="100dp"
+
+                        android:gravity="center"
+
+                        android:layout_weight="1"
+
+                        android:background="@drawable/cancel"
+
+                        android:foreground="?attr/selectableItemBackground"
+
+                        android:onClick="gotoCancelCustom"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:gravity="start">
+
+                    <Button
+                        android:id="@+id/doneBudgetItem"
+
+                        android:layout_width="10dp"
+                        android:layout_height="40dp"
+
+                        android:layout_marginRight="100dp"
+                        android:layout_marginLeft="20dp"
+
+                        android:gravity="center"
+
+                        android:layout_weight="1"
+
+                        android:background="@drawable/done"
+
+                        android:foreground="?attr/selectableItemBackground"
+
+                        android:onClick="gotoDoneCustom"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addGuesttListBtn"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/button_end"
+
+        android:src="@drawable/floating_btn_add_icon"
+
+        android:elevation="12dp"
+
+        app:fabSize="normal"
+
+        app:layout_anchor="@id/bottomBorder"
+
+        app:layout_anchorGravity="center_horizontal"
+
+        app:pressedTranslationZ="25dp"
+        android:onClick="gotoAddCustom"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
